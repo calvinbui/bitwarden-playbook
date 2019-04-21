@@ -1,0 +1,3 @@
+# Bitwarden Playbook
+
+Installs Bitwarden
