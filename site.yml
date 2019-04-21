@@ -11,4 +11,4 @@
   roles:
     - calvinbui.ansible_docker
     - calvinbui.ansible_pip
-    - calvinbui.ansible_bitwarden
+    # - calvinbui.ansible_bitwarden
