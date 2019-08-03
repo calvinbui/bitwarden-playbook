@@ -25,8 +25,14 @@ bitwardenrs_docker_additional_options:
   restart_policy: unless-stopped
   networks: "{{ docker_networks }}"
   labels:
-    # traefik.frontend.rule: "Host:{{ common_tld }}"
+    traefik.web.frontend.rule: "Host:{{ common_tld }}"
+    traefik.web.port: "80"
+    traefik.hub.frontend.rule: "Host:{{ common_tld }};Path:/notifications/hub"
+    traefik.hub.port: "3012"
+    traefik.hub.protocol: "ws"
     # HSTS
     traefik.frontend.headers.STSSeconds: "31536000"
     traefik.frontend.headers.STSIncludeSubdomains: "true"
     traefik.frontend.headers.STSPreload: "true"
+  comparison:
+    "labels": "strict"
