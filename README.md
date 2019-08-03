@@ -1,3 +1,3 @@
-# Nextcloud Playbook
+# Bitwarden Playbook
 
-Installs and configures Nextcloud
+Installs and configures Bitwarden
