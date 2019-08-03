@@ -6,7 +6,6 @@ traefik_config_template: mytraefik.toml.j2
 traefik_config_directory: "{{ common_directory_config }}/traefik"
 traefik_ports:
   - 8080:8080  # management
-  - 80:80  # http
   - 443:443  # https
 
 traefik_docker_additional_options:
