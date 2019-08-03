@@ -1,7 +1,4 @@
 ---
 
-pip_version: 3
-
 pip_install_packages:
   - name: docker
-  - name: docker-compose

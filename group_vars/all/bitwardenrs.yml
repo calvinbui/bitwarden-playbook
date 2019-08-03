@@ -1,0 +1,23 @@
+---
+
+bitwardenrs_name: bitwarden
+bitwardenrs_image: bitwardenrs/server:alpine
+bitwardenrs_ports:
+  - 80:80
+  - 3012:3012
+bitwardenrs_volumes:
+  - "{{ nfs_mount_src }}:/data"
+bitwardenrs_environment_variables:
+  ADMIN_TOKEN: "Keepthistokensecretthisispasswordtoaccessadminareaofyourserver"
+  SIGNUPS_ALLOWED: "false"
+  SHOW_PASSWORD_HINT: "false"
+
+bitwardenrs_docker_additional_options:
+  restart_policy: unless-stopped
+  networks: "{{ docker_networks }}"
+  labels:
+    # traefik.frontend.rule: "Host:{{ common_tld }}"
+    # HSTS
+    traefik.frontend.headers.STSSeconds: "31536000"
+    traefik.frontend.headers.STSIncludeSubdomains: "true"
+    traefik.frontend.headers.STSPreload: "true"
