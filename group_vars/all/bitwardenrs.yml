@@ -6,7 +6,7 @@ bitwardenrs_ports:
   - 80:80
   - 3012:3012
 bitwardenrs_volumes:
-  - "{{ nfs_mount_src }}:/data"
+  - "{{ common_mounted_dir }}:/data"
 bitwardenrs_environment_variables:
   ADMIN_TOKEN: !vault |
           $ANSIBLE_VAULT;1.1;AES256
