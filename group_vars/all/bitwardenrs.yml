@@ -34,5 +34,5 @@ bitwardenrs_docker_additional_options:
     traefik.frontend.headers.STSSeconds: "31536000"
     traefik.frontend.headers.STSIncludeSubdomains: "true"
     traefik.frontend.headers.STSPreload: "true"
-  comparison:
+  comparisons:
     "labels": "strict"
