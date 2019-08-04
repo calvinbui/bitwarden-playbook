@@ -5,5 +5,5 @@ common_user: "calvin"
 common_group: "calvin"
 common_user_id: "1000" # calvin
 common_group_id: "1000" # calvin
-common_directory_config: "/bitwarden"
+common_directory_config: "/apps"
 common_tld: "{{ bitwarden_domain }}"
